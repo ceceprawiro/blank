@@ -9,7 +9,7 @@ require ('inc/helper.php');
  * Define theme name
  */
 if ( ! defined( 'THEME_TEXT_DOMAIN' ) )
-    define('THEME_TEXT_DOMAIN', 'ast_default');
+    define('THEME_TEXT_DOMAIN', 'blank');
 
 /**
  * This Theme only works in WordPress 3.6 or later.
