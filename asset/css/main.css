@@ -1,0 +1,47 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    outline: none !important;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font: normal 14px 'Open Sans', arial, sans-serif;
+    padding: 10px;
+}
+
+#page-header {}
+    #site-menu {}
+    #site-title {}
+
+#page-main {}
+    #sticky {}
+    #breadcrumb {}
+    #content {}
+        #main-content.has-sidebar {
+            float: right;
+            width: 80%;
+        }
+        #content-sidebar {
+            float: left;
+            width: 20%;
+        }
+
+#page-footer {}
+    #main-sidebar {}
+    #copyright {}
+
+
+.skip-to-content {
+    display: none;
+}
+
+img.alignright {float:right; margin:0 0 1em 1em;}
+img.alignleft {float:left; margin:0 1em 1em 0;}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto;}
+a img.alignright {float:right; margin:0 0 1em 1em;}
+a img.alignleft {float:left; margin:0 1em 1em 0;}
+a img.aligncenter {display: block; margin-left: auto; margin-right: auto;}

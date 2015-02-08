@@ -1,0 +1,243 @@
+/**
+ * Handle box-sizing while better addressing child elements.
+ * http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+/**
+ * Responsive images and other embedded objects
+ * Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+ * If this default setting for images is causing issues, you might want to replace it with a .responsive class instead.
+ */
+
+img,
+object,
+embed {
+    max-width: 100%;
+    height: auto;
+}
+
+/**
+ * Force a vertical scrollbar to prevent a jumpy page.
+ */
+
+html {
+    overflow-y: scroll;
+}
+
+
+/**
+ * Make sure sup and sub don't mess with your line-heights.
+ * http://gist.github.com/413930
+ */
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+}
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}
+
+
+/**
+ * Make buttons play nice in IE.
+ */
+
+button,
+input[type=button] {
+    width: auto;
+    overflow: visible;
+}
+
+
+/**
+ * Scale images in IE7 more attractively.
+ */
+.ie7 img {
+    -ms-interpolation-mode: bicubic;
+}
+
+
+/**
+ * Let's clear some floats.
+ */
+
+.clearfix:before, .clearfix:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+
+
+/**
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+
+/**
+ * A better looking default horizontal rule.
+ */
+
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    display: block;
+    height: 1px;
+    padding: 0;
+    margin: 1em 0;
+}
+
+
+/**
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+
+/**
+ * Base styles.
+ */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+a, a:visited {
+    color: #00e;
+}
+a:hover, a:active {
+    color: #a00;
+}
+
+
+/**
+ * Browse Happy prompt.
+ */
+
+.browsehappy {
+    text-align: center;
+    color: #000;
+    background: #ccc;
+    padding: 0.2em 0;
+    margin: 0 0 0.2em 0;
+}
+.browsehappy a,
+.browsehappy a:hover,
+.browsehappy a:visited {
+    text-decoration: none;
+    color: #00e;
+}
+
+/**
+ * Media: print.
+ */
+
+@media print {
+    * {
+        text-shadow: none !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links.
+     */
+
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
